@@ -1,0 +1,117 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Swagger Api Gateway",
+    "description": "An API that uses a microservics in the swagger-4.0 specification",
+    "termsOfService": "http://swagger.io/terms/",
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "host": "localhost:7000",
+  "basePath": "/api",
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/product": {
+      "get": {
+        "summary": "Get Product Detail",
+        "operationId": "listProduct",
+        "tags": ["product"],
+        "responses": {
+          "200": {
+            "description": "An paged array of product",
+            "headers": {
+              "x-next": {
+                "type": "string",
+                "description": "A link to the next page of responses"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Product": {
+      "properties": {
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "description": { "type": "string" },
+            "seo": {
+              "type": "object",
+              "properties": {
+                "description": { "type": "string" },
+                "title": { "type": "string" },
+                "url": { "type": "string" },
+                "keywords": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "title": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "product": {
+          "type": "object",
+          "properties": {
+            "description": { "type": "array", "items": { "type": "string" } },
+            "price": { "type": "string" },
+            "rating": { "type": "integer" },
+            "size": { "type": "array", "items": { "type": "integer" } },
+            "specification": {
+              "type": "object",
+              "properties": { "title": { "type": "string" }, "subtitle":{"type":"string"}, "content":{"type":"array", "items":{"type":"string"}} }
+            },
+            "title":{"type": "string"},
+            "type":{"type": "string"}
+          }
+        },
+        "ugc": {
+          "type": "object",
+          "properties": {
+            "cdnURL": { "type": "string" },
+            "images": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Error": {
+      "required": ["code", "message"],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

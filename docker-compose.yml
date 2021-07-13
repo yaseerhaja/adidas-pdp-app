@@ -1,0 +1,67 @@
+version: "3"
+services: 
+    api-gateway:
+        build:
+          context: "."
+          dockerfile: "./api-gateway/Dockerfile"
+        depends_on:
+          - product-description-page-service
+        environment:
+          - PDP_SERVICE_URI=http://product-description-page-service:7100
+          - NODE_ENV=production
+        ports:
+          - "7000:7000"
+        volumes:
+          - ./api-gateway:/opt/app
+    
+    product-description-page-service:
+        build: 
+            context: "."
+            dockerfile: "./product-description-page-service/Dockerfile"
+        depends_on: 
+            - metadata-service
+            - product-service
+            - user-generated-content-service
+        environment:
+            - METADATA_SERVICE_URI=http://metadata-service:7201
+            - PRODUCT_SERVICE_URI=http://product-service:7301
+            - UGC_SERVICE_URI=http://user-generated-content-service:7401
+            - NODE_ENV=production
+        ports: 
+            - "7100:7100"
+        volumes: 
+            - ./product-description-page-service:/opt/app
+    
+    metadata-service:
+        build: 
+            context: "."
+            dockerfile: "./metadata-service/Dockerfile"
+        environment: 
+            - NODE_ENV=production    
+        ports: 
+            - "7201:7201"
+        volumes: 
+            - ./metadata-service:/opt/app
+
+    product-service:
+        build: 
+            context: "."
+            dockerfile: "./product-service/Dockerfile"
+        environment: 
+            - NODE_ENV=production  
+        ports: 
+            - "7301:7301"
+        volumes: 
+            - ./product-service:/opt/app
+
+    user-generated-content-service:
+        build: 
+            context: "."
+            dockerfile: "./user-generated-content-service/Dockerfile"
+        environment: 
+            - NODE_ENV=production  
+        ports: 
+            - "7401:7401"
+        volumes: 
+            - ./user-generated-content-service:/opt/app
+    
