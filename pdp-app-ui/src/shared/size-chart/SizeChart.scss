@@ -6,6 +6,7 @@
         display: flex;
         flex-flow: row wrap;
         border-left: 1px solid #ebedee;
+        margin-bottom: 24px;
         span{
             height: 40px;
             width: 73.5px;
@@ -27,5 +28,17 @@
             background-color: #000;
             color: #fff;
         }
+    }
+    .ruler-logo, .mail-logo{
+        width: 17px;
+        margin-right: 10px;
+    }
+    .ruler-def{
+        div{
+            display: flex;
+        }
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
     }
 }

@@ -14,5 +14,5 @@ app.use(bodyParser.urlencoded({
 require('./metadata/index')(app);
 
 app.listen(port, () => {
-    console.log(`Server is up on port ${port}!`);
+    console.log(`MetaData Service Server is up on port ${port}!`);
  });

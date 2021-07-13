@@ -3,7 +3,8 @@ import {React, Component} from 'react';
 
 import './SizeChart.scss';
 
-import SizeHelpLogo from '../../assets/images/size-help.svg';
+import RulerLogo from '../../assets/images/ruler.svg';
+import MailLogo from '../../assets/images/mail.svg';
 
 class SizeChart extends Component {
     state = {  }
@@ -19,8 +20,13 @@ class SizeChart extends Component {
                         ))
                     }
                 </div>
-                <div>
-                    <img src={SizeHelpLogo} alt="size-logo"/>
+                <div className="ruler-def">
+                    <div>
+                        <img className="ruler-logo" src={RulerLogo} alt="ruler-logo"/> <a href="" >Size Help</a>
+                    </div>
+                    <div>
+                        <img className="mail-logo" src={MailLogo} alt="mail-logo"/> <a href="" >Size Not Available?</a>
+                    </div>
                 </div>
             </div>
         );

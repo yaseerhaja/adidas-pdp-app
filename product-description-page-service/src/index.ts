@@ -16,5 +16,5 @@ if (process.env.NODE_ENV !== 'production') {
 require('./pdp/index')(app);
 
 app.listen(port, () => {
-    console.log(`Server is up on port ${port}!`);
+    console.log(`Product Description Page Service Server is up on port ${port}!`);
  });

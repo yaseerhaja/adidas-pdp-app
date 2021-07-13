@@ -1,6 +1,8 @@
 
 import {React, Component} from 'react';
 
+import BackLogo from '../../assets/images/back.svg';
+
 import './UserGeneratedContent.scss';
 import Carousel from "react-elastic-carousel";
 const breakPoints = [
@@ -16,7 +18,7 @@ class UserGeneratedContent extends Component {
         return (
             <div className="user-generated-content-cls">
                 <div className="breadcrumb">
-                    {/* <svg id="arrow-back" viewBox="0 0 16 24" style="height: 19px;width: 19px;"><title>arrow-back</title><g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"><path d="M15 18v-6H2"></path><path d="M6.5 7l-5 5 5 5"></path></g></svg> */}
+                    <img src={BackLogo} />
                     <a href="">Back</a>
                     <span>    </span>
                     <a href="">Home</a>
@@ -30,7 +32,6 @@ class UserGeneratedContent extends Component {
                     {
                     usercontent?.images.map((entry, index) => {
                         const imgURL = usercontent.cdnURL + '/' + entry;
-                        console.log(imgURL);
                         return(
                             <div key={index}>
                                 <img src={imgURL} />

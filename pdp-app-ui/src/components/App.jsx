@@ -29,7 +29,6 @@ class App extends Component {
               product: data.product,
               metadata: data.metadata,
             });
-            console.log(this.state)
           });
   }
   render() {
