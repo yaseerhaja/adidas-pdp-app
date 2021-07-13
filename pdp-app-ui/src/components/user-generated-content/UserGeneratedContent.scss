@@ -1,0 +1,36 @@
+.user-generated-content-cls{
+    background-color: #edeff0;
+    width: 70%;
+    height: calc(100vh - 300px);
+    min-height: 600px;
+    max-height: 2000px;
+    position: relative;
+
+    .breadcrumb{
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        z-index: 54;
+        text-shadow: 1px 1px 0 #ebedee;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        a {
+            font-family: "AdihausDINRegular",Helvetica,Arial,sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+        span{
+            margin-left: 5px;
+        }
+    }
+    .carousel-container{
+        height: 98%;
+        .rec-carousel-wrapper{
+            height: 100%;
+        }
+    }
+}

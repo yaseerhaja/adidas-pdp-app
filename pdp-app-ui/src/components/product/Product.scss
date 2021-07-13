@@ -1,0 +1,42 @@
+.product-cls{
+    width: 30%;
+    section{
+        margin: 10px 30px;
+        &.header{
+            font-family: "AdihausDINRegular",Helvetica,Arial,sans-serif;
+            font-weight: normal;
+
+            .product-type{
+                font-size: 14px;
+            }
+        }
+        &.title{
+            font-family: "AdihausDINCnMediumItalic",Helvetica,Arial,sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 42px;
+            line-height: 38px;
+        }
+        &.subtitle{
+            font-family: "AdihausDINRegular",Helvetica,Arial,sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+        }
+        &.price{
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 18px;
+            font-family: "AdihausDINRegular",Helvetica, Arial, sans-serif;
+            font-style: normal;
+            font-weight: 800;
+        }
+
+        &.size-chart{
+            font-family: "AdihausDINRegular",Helvetica,Arial,sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+
+    }
+}

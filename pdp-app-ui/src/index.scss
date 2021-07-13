@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'AdihausDINBold';
+  src: local('AdihausDINBold'), url(./assets/fonts/AdihausDIN-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AdihausDINCnMediumItalic';
+  src: local('AdihausDINCnMediumItalic'), url(./assets/fonts/AdihausDIN-CnMediumItalic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AdihausDINRegular';
+  src: local('AdihausDINRegular'), url(./assets/fonts/AdihausDIN-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'AdineuePROBold';
+  src: local('AdineuePROBold'), url(./assets/fonts/adineuePRO-Bold.woff2) format('woff2');
+}
