@@ -25,3 +25,9 @@
         font-weight: normal;
     }
 }
+
+@media (max-width: 640px) {
+    .product-description-cls{
+        margin: auto 20px;
+    }
+}

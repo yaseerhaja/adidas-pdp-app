@@ -38,3 +38,14 @@
         }
     }
 }
+
+@media (max-width: 640px) {
+    .user-generated-content-cls{
+        .rec-item-wrapper{
+            img{
+                width: 320px;
+            }
+        }
+    }
+}
+

@@ -54,3 +54,20 @@
     transform: rotate(360deg);
   }
 }
+
+
+@media (max-width: 640px) {
+  .flex-container{
+    .flex-item-product{
+      flex-flow: column wrap;
+      .user-generated-content-cls{
+        width: 100%;
+        height: 320px;
+        min-height: 320px;
+      }
+    }
+    .flex-item-product-description{
+      width: 100%;
+    }
+  }
+}
